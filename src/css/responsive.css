@@ -1,0 +1,39 @@
+@media (max-width: 1120px){
+  .header .logo{
+      max-width: 190px;
+  }
+
+  .characters-selection{
+      flex-direction: column-reverse;
+      max-width: 430px;
+      margin: 0 auto;
+  }
+
+  .characters-selection .personagens{
+      margin-top: 37px;
+  }
+
+  .characters-selection .personagens .titulo{
+      font-size: 15px;
+  }
+
+  .characters-selection .lista-de-personagens{
+      gap: 9px
+  }
+
+  .characters-selection .character img{
+      width: 80px;
+  }
+
+  .selected-character .selected-character-img{
+      width: 350px;
+      height: 350px;
+  }
+
+  .selected-character .character-description{
+      width: 80%;
+      font-size: 16px;
+      margin: 20px auto;
+  }
+
+}

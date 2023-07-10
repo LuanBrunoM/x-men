@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>X-Men</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="./src/img/logo.svg" type="image/svg">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;700&display=swap" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <link rel="stylesheet" href="./src/css/responsive.css">
+  </head>
+  <body>
+    <header class="header">
+      <img class="logo" src="./src/img/logo.svg" alt="Logo x-men">
+    </header>
+
+    <main class="characters-selection">
+      <section class="characters">
+        <h1 class="title">Selecione um personagem</h1>
+        <ul class="characters-list">
+          <li class="character selected" id="cyclops" data-name="Ciclope" data-description="Ele tem o poder de disparar rajadas ópticas por um acidente que aconteceu com ele quando criança, mas não consegue controlá-los">
+            <img src="./src/img/card-cyclops.jpg" alt="Cyclops Character"/>
+          </li>
+
+          <li class="character" id="jean-grey" data-name="Jean Grey" 
+          data-description="Jean Grey é uma mutante nível ômega e o principal avatar da Força Fênix, no qual manifesta poderes cósmicos. A telepatia e telecinese">
+            <img src="./src/img/card-jean-grey.jpg" alt="Jean Grey Character"/>
+          </li>
+
+          <li class="character" id="shadowcat" data-name="Lince Negra" 
+          data-description="Ela tem o poder de atravessar matéria sólida,campos de energia,rajadas ópticas, continuando intacta,e também tem o poder de andar no ar">
+            <img src="./src/img/card-shadowcat.jpg" alt="Shadowcat Character"/>
+          </li>
+
+          <li class="character" id="storm" data-name="Tempestade" 
+          data-description="Tem o poder de controlar as forças da natureza, muito poderosa ela pode produzir raios, chuvas, gelos, ventos, neblina, entre outros efeitos">
+            <img src="./src/img/card-storm.jpg" alt="Storm Character"/>
+          </li>
+
+          <li class="character" id="rogue" data-name="Vampira" 
+          data-description="Ela tem o poder de absorver a vitalidade e memória das pessoas que toca ou no caso dos mutantes os poderes e a memória, mas só temporariamente">
+            <img src="./src/img/card-rogue.jpg" alt="Rogue Character"/>
+          </li>
+
+          <li class="character" id="wolverine" data-name="Wolverine" data-description="Ele passou por experimentos que revestiram seu esqueleto com adamantium, tornando-o praticamente indestrutível e com garras de adamantium">
+            <img src="./src/img/card-wolverine.jpg" alt="Wolverine Character"/>
+          </li>
+
+          <li class="character" id="nightcrawler" data-name="Noturno" data-description="Ele é um mutante que nasceu com cauda, orelhas pontudas e com o poder de se Teletransportar">
+            <img src="./src/img/card-nightcrawler.jpg" alt="Nightcrawler Character"/>
+          </li>
+
+          <li class="character" id="magneto" data-name="Magneto" 
+          data-description="Ele tem o poder de magnetocinese, ou seja, controlar objetos de metal e criar campos magnéticos">
+            <img src="./src/img/card-magneto.jpg" alt="Magneto Character"/>
+          </li>
+        </ul>
+      </section>
+
+      <section class="selected-character">
+        <img
+          class="selected-character-img"
+          src="./src/img/card-cyclops.png"
+          alt="Selected Character"
+        />
+
+        <div class="character-information">
+          <h2 class="character-name" id="character-name">Ciclope</h2>
+          <p class="character-description" id="character-description">
+            Ele tem o poder de disparar rajadas ópticas por um acidente que
+            aconteceu com ele quando criança, mas não consegue controlá-los
+          </p>
+        </div>
+      </section>
+    </main>
+    <script src="./src/js/script.js"></script>
+  </body>
+</html>
