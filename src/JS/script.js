@@ -1,11 +1,18 @@
-const characters = document.querySelectorAll('.character');
+fetch('./src/data/characters.json')
+  .then(response => response.json())
+  .then(data => {
+    const characters = document.querySelectorAll('.character');
 
-characters.forEach(character => {
-  character.addEventListener('mouseenter', () => { 
-    changeClassSelected(character);
-    changeCharacter(character);
+    const firstCharacter = characters[0];
+    changeCharacter(firstCharacter, data);
+
+    characters.forEach(character => {
+      character.addEventListener('mouseenter', () => { 
+        changeClassSelected(character);
+        changeCharacter(character, data);
+      })
+    });
   })
-})
 
 function changeClassSelected(character){
   const selectedCharacter = document.querySelector('.selected');
@@ -13,25 +20,25 @@ function changeClassSelected(character){
   character.classList.add('selected');
 }
 
-function changeCharacter(character){
+function changeCharacter(character, data){
   changeImgSelected(character);
-  changeName(character);
-  changeDescription(character);
+  changeName(character, data);
+  changeDescription(character, data);
 }
 
 function changeImgSelected(character){
-  const imgSectionCaracter = document.querySelector('.selected-character-img'); 
-  imgSectionCaracter.src = `./src/img/card-${character.id}.png`
+  const imgSectionCharacter = document.querySelector('.selected-character-img'); 
+  imgSectionCharacter.src = `./src/img/card-${character.id}.png`;
 }
 
-function changeName(character){
+function changeName(character, data){
   const characterName = document.querySelector('.character-name');
-  const name = character.getAttribute('data-name');
-  characterName.innerHTML = name
+  const name = data[character.id].name;
+  characterName.innerHTML = name;
 }
 
-function changeDescription(character){
-  const characterDescription = document.querySelector('.character-description')
-  const description = character.getAttribute('data-description')
-  characterDescription.innerHTML = description
+function changeDescription(character, data){
+  const characterDescription = document.querySelector('#character-description');
+  const description = data[character.id].description;
+  characterDescription.innerHTML = description;
 }
